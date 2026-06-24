@@ -1,0 +1,3 @@
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "asoc_core.settings"
+pythonpath = ["apps"]

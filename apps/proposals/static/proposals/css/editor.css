@@ -1,0 +1,251 @@
+.editor-shell {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.editor-bar {
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.editor-main-actions,
+.editor-secondary-actions {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  min-width: 0;
+}
+
+.editor-main-actions {
+  flex: 1;
+}
+
+.editor-title-input {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: var(--text);
+  flex: 1;
+  font-size: 15px;
+  font-weight: 700;
+  min-width: 120px;
+  padding: 7px 8px;
+}
+
+.editor-title-input:focus {
+  background: var(--surface2);
+  border-color: var(--border);
+}
+
+.editor-status,
+.save-indicator {
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.editor-document {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 32px;
+  min-height: 560px;
+  padding: 34px 44px;
+}
+
+.editor-section {
+  border-bottom: 1px solid var(--border);
+  padding: 0 0 24px;
+  margin-bottom: 24px;
+}
+
+.editor-section:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section-top {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.section-heading {
+  color: var(--text);
+  flex: 1;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+  min-width: 0;
+  outline: none;
+}
+
+.section-content {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.7;
+  min-height: 32px;
+  outline: none;
+}
+
+.section-heading:focus,
+.section-content:focus {
+  background: var(--surface2);
+  border-radius: 6px;
+}
+
+.section-content p {
+  margin: 0 0 10px;
+}
+
+.section-content h1,
+.section-content h2,
+.section-content h3 {
+  color: var(--text);
+  font-weight: 700;
+  margin: 16px 0 8px;
+}
+
+.section-content h1 { font-size: 22px; }
+.section-content h2 { font-size: 19px; }
+.section-content h3 { font-size: 16px; }
+
+.section-content ul,
+.section-content ol {
+  list-style-position: outside;
+  margin: 8px 0 12px 22px;
+}
+
+.section-content ul {
+  list-style-type: disc;
+}
+
+.section-content ol {
+  list-style-type: decimal;
+}
+
+.section-content table {
+  border-collapse: collapse;
+  margin: 12px 0;
+  width: 100%;
+}
+
+.section-content td,
+.section-content th {
+  border: 1px solid var(--border);
+  padding: 8px;
+  text-align: left;
+}
+
+.section-content th {
+  background: var(--surface2);
+}
+
+.section-image {
+  border-radius: 6px;
+  display: block;
+  margin-top: 14px;
+  max-width: 100%;
+}
+
+.generation-progress {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 12px;
+}
+
+.generation-progress-row {
+  align-items: center;
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.generation-meter {
+  background: #e5e7eb;
+  border-radius: 999px;
+  height: 6px;
+  overflow: hidden;
+}
+
+.generation-meter div {
+  background: var(--accent);
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.empty-editor {
+  color: var(--muted);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.modal-overlay {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+}
+
+.modal-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  max-width: 360px;
+  padding: 20px;
+  width: calc(100% - 32px);
+}
+
+.modal-card h3 {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.modal-card p {
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-xs {
+  font-size: 11px;
+  padding: 3px 8px;
+}
+
+@media (max-width: 760px) {
+  .editor-bar,
+  .editor-main-actions,
+  .editor-secondary-actions,
+  .section-top,
+  .modal-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .editor-document {
+    padding: 22px 18px;
+  }
+}

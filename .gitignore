@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+slide_builder.sqlite3
+media/
+staticfiles/
+
+# Environment variables
+.env
+.env.*
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Celery
+celerybeat-schedule.*
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Test / temporary files
+*.txt
+*.html
+*.out
+__MACOSX/
+.pytest_cache/
+render_out.html
+response.html
+test.html
+diag_out.txt
+faulthandler_out.txt
+pip_out.txt
+
+# Large output / trace files
+openai_trace.txt
+server_out.txt
+enrichment_akshat_output.txt

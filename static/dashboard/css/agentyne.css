@@ -1,0 +1,433 @@
+:root {
+    --brand-primary: #ca0013;
+    --brand-primary-hover: #8e000e;
+    --brand-secondary: #000000;
+    --brand-background: #eeebe3;
+    --brand-accent: #ffffff;
+    --brand-success: #4CAF50;
+    --brand-error: #F44336;
+
+    --sidebar-width: 240px;
+    --header-height: 64px;
+    --font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--brand-background);
+    color: var(--brand-secondary);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Layout */
+.app-container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--brand-accent);
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    z-index: 10;
+}
+
+.main-content {
+    margin-left: var(--sidebar-width);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    height: var(--header-height);
+    background-color: var(--brand-accent);
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+.content-area {
+    padding: 24px;
+    flex: 1;
+}
+
+/* Sidebar Components */
+.logo-container {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--brand-secondary);
+}
+
+.logo-text span {
+    color: var(--brand-primary);
+}
+
+.nav-menu {
+    padding: 16px 0;
+    list-style: none;
+    margin: 0;
+}
+
+.nav-item {
+    margin-bottom: 4px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 24px;
+    text-decoration: none;
+    color: #4a4a4a;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: rgba(202, 0, 19, 0.05);
+    color: var(--brand-primary);
+    border-left: 3px solid var(--brand-primary);
+}
+
+/* Cards (Salesforce Style) */
+.slds-card {
+    background: var(--brand-accent);
+    border: 1px solid #dddbda;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+}
+
+.slds-card__header {
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #dddbda;
+    margin-bottom: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slds-card__header-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: none;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: var(--brand-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--brand-primary-hover);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--brand-primary);
+    color: var(--brand-primary);
+}
+
+/* Grid System (Basic) */
+.grid {
+    display: grid;
+    gap: 24px;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Utility */
+.text-success {
+    color: var(--brand-success);
+}
+
+.text-error {
+    color: var(--brand-error);
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+/* Additional Dashboard Styles */
+:root {
+    --ai-purple: #8b5cf6;
+    --collab-blue: #3b82f6;
+    --success-green: #10b981;
+    --warning-amber: #f59e0b;
+    --danger-red: #ef4444;
+}
+
+/* Tab Styles */
+.tab-button {
+    padding: 0.75rem 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #666;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+}
+
+.tab-button:hover {
+    color: var(--brand-primary);
+    background-color: #f9fafb;
+}
+
+.tab-button.active {
+    color: var(--brand-primary);
+    border-bottom-color: var(--brand-primary);
+    font-weight: 600;
+}
+
+/* Progress Bar */
+.progress-bar {
+    background: #e5e7eb;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: var(--ai-purple);
+    transition: width 0.3s ease;
+}
+
+/* Badge Styles */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.badge-ai {
+    background: var(--ai-purple);
+    color: white;
+}
+
+.badge-collab {
+    background: var(--collab-blue);
+    color: white;
+}
+
+/* Priority Indicators */
+.priority-high {
+    color: var(--danger-red);
+    font-weight: 600;
+}
+
+.priority-medium {
+    color: var(--warning-amber);
+    font-weight: 600;
+}
+
+.priority-low {
+    color: var(--success-green);
+    font-weight: 600;
+}
+
+/* AI Suggestion Box */
+.ai-suggestion {
+    border: 2px solid var(--ai-purple);
+    border-radius: 8px;
+    background: #faf5ff;
+    padding: 1rem;
+}
+
+/* Activity Feed */
+.activity-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+/* Notification Badge */
+.notification-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--brand-primary);
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Task Card */
+.task-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1rem;
+    background: white;
+    transition: all 0.2s;
+}
+
+.task-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-color: #d1d5db;
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+    .grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+
+    .grid-cols-2,
+    .grid-cols-3,
+    .grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Stats Grid System */
+.stats-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    align-items: stretch !important;
+}
+
+.stat-card {
+    flex: 1 1 200px;
+    /* Grow and shrink, but base at 200px */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-width: 180px;
+    /* Ensure they don't get TOO small */
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.stat-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    line-height: 1;
+}
+
+@media (max-width: 640px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
