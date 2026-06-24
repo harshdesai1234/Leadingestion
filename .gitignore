@@ -44,11 +44,21 @@ node_modules/
 npm-debug.log*
 
 # Test / temporary files
-*.txt
 *.html
 *.out
 __MACOSX/
 .pytest_cache/
+
+# Specific txt files (but NOT requirements.txt)
+server_out.txt
+openai_trace.txt
+enrichment_akshat_output.txt
+akshat_test_results.txt
+richard_retest_results.txt
+verify_fix_results.txt
+diag_out.txt
+faulthandler_out.txt
+pip_out.txt
 render_out.html
 response.html
 test.html
