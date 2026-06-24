@@ -9,8 +9,9 @@ django-allauth==65.3.0
 # CORS & Security
 django-cors-headers==4.6.0
 
-# Static files serving (needed for Vercel/production)
+# Static files serving & Production Server (needed for Railway/Vercel/production)
 whitenoise==6.8.2
+gunicorn==23.0.0
 
 # Environment Variables
 python-dotenv==1.0.1
