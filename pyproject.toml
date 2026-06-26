@@ -1,8 +1,0 @@
-[project]
-name = "asoc-leadingestion"
-version = "1.0.0"
-requires-python = "==3.12.*"
-
-[tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "asoc_core.settings"
-pythonpath = ["apps"]
