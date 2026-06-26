@@ -1,7 +1,7 @@
 # Django Core
 django==5.1.7
 djangorestframework==3.15.2
-psycopg2-binary==2.9.10
+psycopg[binary]==3.2.3
 
 # Authentication & Authorization
 django-allauth==65.3.0
